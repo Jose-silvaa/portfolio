@@ -1,9 +1,9 @@
-import HomePageMenu from "@/components/home-page-menu/home-page-menu";
+import HomeSectionHeader from "@/pages/home-page/home-page-sections/home-section-header";
 
 export default function Home() {
   return (
     <main>
-      <HomePageMenu/>
+        <HomeSectionHeader />
     </main>
   );
 }
