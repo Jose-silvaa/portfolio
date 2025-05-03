@@ -5,7 +5,7 @@ export function SocialLinks() {
         <section className="text-center py-10">
             <div className="flex justify-center items-center gap-6">
                 <a
-                    href="https://www.linkedin.com/in/seu-usuario"
+                    href="https://www.linkedin.com/in/jose-vitor-facanha/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -14,7 +14,7 @@ export function SocialLinks() {
                     <FaLinkedin size={32} />
                 </a>
                 <a
-                    href="https://github.com/seu-usuario"
+                    href="https://github.com/Jose-silvaa"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
