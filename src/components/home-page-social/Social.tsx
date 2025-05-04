@@ -23,7 +23,7 @@ export function SocialLinks() {
                     <FaGithub size={32} />
                 </a>
                 <a
-                    href="https://www.instagram.com/seu-usuario"
+                    href="https://www.instagram.com/zevitor_ze"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"

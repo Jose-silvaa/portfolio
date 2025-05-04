@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HomeSectionHeader(){
 
     return (
-        <header className="flex flex-col">
+        <header className="flex flex-col mb-20">
             <HomePageMenu />
             <section className="flex flex-row justify-center sm:justify-around px-10 py-15 flex-wrap text-left mt-10 w-full">
                 <section className="">
@@ -17,7 +17,6 @@ export default function HomeSectionHeader(){
                     <HomePagePhrase />
                     <HomeSectionSocial />
                 </section>
-
             </section>
         </header>
     )

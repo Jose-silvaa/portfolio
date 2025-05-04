@@ -20,13 +20,10 @@ export default function HomeSectionProjects(){
     ];
 
     return (
-        <section className="px-15 py-10" id="projects">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-medium mb-4 text-left">My Projects</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                        Some of the projects I have been working on recently. Feel free to check them out!
-                    </p>
+        <section className="px-15 py-10">
+            <div className=" px-4">
+                <div className="sm:text-left mb-12">
+                    <h2 className="text-4xl font-medium mb-4">PROJECTS</h2>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
