@@ -1,11 +1,19 @@
-import HomeSectionHeader from "@/pages/home-page/home-page-sections/home-section-header";
-import HomeSectionProjects from "@/pages/home-page/home-page-sections/home-section-projects";
+import Header from "@/components/header/header";
+import About from "@/components/about/about";
+import Projects from "@/components/projects/projects";
+import Experience from "@/components/experience/experience";
+import Skills from "@/components/skills/skills";
+import Contact from "@/components/contact/contact";
 
 export default function Home() {
   return (
-    <main>
-        <HomeSectionHeader />
-        <HomeSectionProjects/>
-    </main>
+    <div>
+        <Header />
+        <About />
+        <Projects/>
+        <Experience />
+        <Skills/>
+        <Contact/>
+    </div>
   );
 }

@@ -14,6 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <head>
+        <title></title>
+        <link rel="icon" href="/reshot.icon.svg" type="image/png" />
+    </head>
       <body>
         {children}
       </body>
