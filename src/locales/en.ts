@@ -1,4 +1,63 @@
-export const en = {
+export type Translations = {
+  nav: {
+    home: string;
+    about: string;
+    projects: string;
+    skills: string;
+    experience: string;
+    contact: string;
+  };
+  header: {
+    title: string;
+    subtitle: string;
+    tagline: string;
+    cvEn: string;
+    cvPt: string;
+  };
+  about: {
+    title: string;
+    intro: string;
+    paragraph2: string;
+    tags: {
+      problemSolving: string;
+      fullStack: string;
+      collaboration: string;
+    };
+  };
+  projects: {
+    title: string;
+    repository: string;
+    liveDemo: string;
+    civis: { title: string; description: string };
+    rehabit: { title: string; description: string };
+    biblioteca: { title: string; description: string };
+    supportSystemApi: { title: string; description: string };
+  };
+  experience: {
+    title: string;
+    present: string;
+    softwareDeveloper: string;
+    qaTester: string;
+  };
+  skills: {
+    title: string;
+    hardSkills: string;
+  };
+  contact: {
+    title: string;
+    heading: string;
+    description: string;
+    location: string;
+    placeholderEmail: string;
+    placeholderSubject: string;
+    placeholderMessage: string;
+    sendButton: string;
+    successMessage: string;
+    errorMessage: string;
+  };
+};
+
+export const en: Translations = {
   nav: {
     home: "Home",
     about: "About",
@@ -73,6 +132,4 @@ export const en = {
     successMessage: "Message sent successfully!",
     errorMessage: "Failed to send message. Please try again.",
   },
-} as const;
-
-export type Translations = typeof en;
+};
