@@ -1,25 +1,45 @@
-import {Social} from "@/components/social/social";
+"use client";
+
+import { Social } from "@/components/social/social";
 import NavMenu from "@/components/nav-menu/nav-menu";
+import { useLanguage } from "@/contexts/language-context";
 
+export default function Header() {
+  const { t } = useLanguage();
 
-export default function Header(){
-
-    return (
-        <header className="flex flex-col mb-30">
-            <NavMenu />
-            <section className="flex justify-center sm:justify-around px-5 py-35  flex-wrap text-center ">
-                <section>
-                    <h1 className="text-3xl md:text-5xl font-semibold mb-5">
-                        <span>José Silva </span>
-                        <span className="[color:#dd5245]">Software Developer</span>
-                    </h1>
-                    <Social/>
-                    <div className="flex flex-col md:flex-wrap md:flex-row justify-center p-5">
-                        <a href="/jose-silva-cv.pdf" download className="md:mr-5 border-1 rounded-md px-10 py-2 cursor-pointer hover:bg-[#dd5245]">READ THE CV</a>
-                        <a href="/jose-silva-cv-pt.pdf" download className="border-1 rounded-md px-10 py-2 cursor-pointer hover:bg-[#dd5245]">READ THE CV - PT</a>
-                    </div>
-                </section>
-            </section>
-        </header>
-    )
+  return (
+    <header className="flex flex-col mb-30 min-h-screen flex justify-center items-center background">
+      <NavMenu />
+      <section className="flex justify-center sm:justify-around px-5 py-20 flex-wrap text-center animate-fade-in-up">
+        <section className="max-w-4xl">
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+              <span className="block mb-2">{t.header.title}</span>
+              <span className="gradient-text block">{t.header.subtitle}</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-2xl mx-auto">
+              {t.header.tagline}
+            </p>
+          </div>
+          <Social />
+          <div className="flex flex-col sm:flex-row justify-center gap-4 p-5 mt-8">
+            <a
+              href="/jose-silva-cv.pdf"
+              download
+              className="bg-[#dd5245] hover:bg-[#c9453a] text-white font-semibold rounded-lg px-8 py-3 cursor-pointer transform hover:scale-105 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {t.header.cvEn}
+            </a>
+            <a
+              href="/Desenvolvedor de Software - José Silva.pdf"
+              download
+              className="bg-transparent border-2 border-[#dd5245] hover:bg-[#dd5245] text-white font-semibold rounded-lg px-8 py-3 cursor-pointer transform hover:scale-105 transition-all duration-300"
+            >
+              {t.header.cvPt}
+            </a>
+          </div>
+        </section>
+      </section>
+    </header>
+  );
 }

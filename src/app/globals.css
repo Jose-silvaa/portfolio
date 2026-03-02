@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
 :root {
-  --background: #04164a;
+  --background: #0a0e27;
   --foreground: #ffffff;
-
+  --accent: #dd5245;
+  --accent-hover: #c9453a;
+  --card-bg: rgba(16, 22, 48, 0.6);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 :root,
@@ -18,26 +21,107 @@ html,
 body {
   scroll-behavior: smooth;
   max-width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: "Space Mono", monospace;
+  font-family: "Inter", "Space Mono", monospace;
 }
 
+* {
+  transition: all 0.3s ease;
+}
 
 .background {
-  background-image:
-          radial-gradient(circle at 40% 91%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 50%,rgba(229, 229, 229,0.04) 50%, rgba(229, 229, 229,0.04) 100%),
-          radial-gradient(circle at 66% 97%, rgba(36, 36, 36,0.04) 0%, rgba(36, 36, 36,0.04) 50%,rgba(46, 46, 46,0.04) 50%, rgba(46, 46, 46,0.04) 100%),
-          radial-gradient(circle at 86% 7%, rgba(40, 40, 40,0.04) 0%, rgba(40, 40, 40,0.04) 50%,rgba(200, 200, 200,0.04) 50%, rgba(200, 200, 200,0.04) 100%),
-          radial-gradient(circle at 15% 16%, rgba(99, 99, 99,0.04) 0%, rgba(99, 99, 99,0.04) 50%,rgba(45, 45, 45,0.04) 50%, rgba(45, 45, 45,0.04) 100%),
-          radial-gradient(circle at 75% 99%, rgba(243, 243, 243,0.04) 0%, rgba(243, 243, 243,0.04) 50%,rgba(37, 37, 37,0.04) 50%, rgba(37, 37, 37,0.04) 100%),
-          linear-gradient(90deg, rgb(34,65,215), rgb(16,22,48));
-  background-repeat: no-repeat;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(34, 65, 215, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(221, 82, 69, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(34, 65, 215, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1628 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
 }
 
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 40% 91%, rgba(251, 251, 251, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 66% 97%, rgba(36, 36, 36, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 86% 7%, rgba(40, 40, 40, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
 
 .custom-shadow {
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(34, 65, 215, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(221, 82, 69, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #dd5245 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #dd5245, #2241d7);
+  border-radius: 2px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

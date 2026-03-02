@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { LanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
   title: "José Silva - Portfolio",
@@ -13,13 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <head>
+    <html lang="en" suppressHydrationWarning>
+      <head>
         <title></title>
         <link rel="icon" href="/reshot.icon.svg" type="image/png" />
-    </head>
+      </head>
       <body>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
