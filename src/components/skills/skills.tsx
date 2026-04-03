@@ -5,7 +5,6 @@ import { IoLogoAngular } from "react-icons/io";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript, SiDotnet } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 import { DiPostgresql } from "react-icons/di";
