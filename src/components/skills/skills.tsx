@@ -8,6 +8,7 @@ import { SiTypescript, SiDotnet } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
+import { DiPostgresql } from "react-icons/di";
 
 export default function Skills() {
   const { t } = useLanguage();
@@ -61,9 +62,9 @@ export default function Skills() {
         },
 
         {
-            language: "NextJS",
-            image: RiNextjsFill,
-            link: "https://nextjs.org/",
+            language: "PostgreSQL",
+            image: DiPostgresql,
+            link: "https://www.postgresql.org/",
             color: "#000000"
         }
 

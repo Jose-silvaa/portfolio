@@ -22,24 +22,6 @@ export function Social() {
                 >
                     <FaGithub size={32} />
                 </a>
-                <a
-                    href="https://www.instagram.com/zevitor_ze"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="text-pink-500 transition-colors duration-300"
-                >
-                    <FaInstagram size={32} />
-                </a>
-                <a
-                    href="https://www.youtube.com/@ssilvadev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="text-red-600 transition-colors duration-300"
-                >
-                    <FaYoutube size={32} />
-                </a>
             </div>
         </section>
     );

@@ -10,36 +10,13 @@ export default function Projects() {
 
   const projects = [
     {
-      title: t.projects.civis.title,
-      description: t.projects.civis.description,
-      link: "https://civis-conectados-i5zxympap-jose-vitor-s-projects-e0a86c12.vercel.app/",
-      image: "/project-civis.png",
-      Technologies: ["NextJS", "React", "JavaScript", "Firebase"],
-      repository: "https://github.com/Jose-silvaa/Civis-Conectados",
-    },
-    {
-      title: t.projects.rehabit.title,
-      description: t.projects.rehabit.description,
-      link: "https://frontend-rehabit.vercel.app/",
-      image: "/project-rehabit.png",
-      Technologies: ["NextJS", "React", "JavaScript", "Firebase"],
-      repository: "https://github.com/Jose-silvaa/frontend-rehabit",
-    },
-    {
-      title: t.projects.biblioteca.title,
-      description: t.projects.biblioteca.description,
-      image: "/project-biblioteca.png",
-      link: "https://biblioteca-frontend-one.vercel.app/",
-      Technologies: ["C#", ".NET", "Postgresql", "Angular"],
-      repository: "https://gitlab.com/Jose02/backend",
-    },
-    {
       title: t.projects.supportSystemApi.title,
       description: t.projects.supportSystemApi.description,
       image: "/jira-image.jpg",
       link: "https://github.com/Jose-silvaa/Support-System-API",
       Technologies: ["C#", ".NET 9", "Entity Framework Core", "SQL Server", "JWT"],
       repository: "https://github.com/Jose-silvaa/Support-System-API",
+      liveDemo: "https://system-ticket-1-0.onrender.com/index.html",
     },
   ];
 
@@ -93,7 +70,7 @@ export default function Projects() {
                                     <span className="text-sm font-medium">{t.projects.repository}</span>
                                 </Link>
                                 <Link
-                                    href={project.link}
+                                    href={project.liveDemo}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-[#dd5245] hover:text-[#c9453a] transition-colors"

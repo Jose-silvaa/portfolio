@@ -15,7 +15,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title></title>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EER1PV1XW"></script>
+      <script
+        dangerouslySetInnerHTML={{
+              __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EER1PV1XW');
+        `,
+        }}
+      />
         <link rel="icon" href="/reshot.icon.svg" type="image/png" />
       </head>
       <body>
