@@ -16,7 +16,7 @@ export default function Projects() {
       link: "https://github.com/Jose-silvaa/Support-System-API",
       Technologies: ["C#", ".NET 9", "Entity Framework Core", "SQL Server", "JWT"],
       repository: "https://github.com/Jose-silvaa/Support-System-API",
-      liveDemo: "https://system-ticket-1-0.onrender.com/index.html",
+      liveDemo: "https://support-system-frontend-delta.vercel.app",
     },
   ];
 
