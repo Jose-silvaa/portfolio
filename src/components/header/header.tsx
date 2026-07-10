@@ -31,7 +31,7 @@ export default function Header() {
               {t.header.cvEn}
             </a>
             <a
-              href="/Desenvolvedor de Software - José Silva.pdf"
+              href="Desenvolvedor Backend - José Silva.pdf"
               download
               className="bg-transparent border-2 border-[#dd5245] hover:bg-[#dd5245] text-white font-semibold rounded-lg px-8 py-3 cursor-pointer transform hover:scale-105 transition-all duration-300"
             >
